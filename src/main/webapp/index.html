@@ -1,0 +1,185 @@
+<!doctype html>
+<!-- <html lang="en" manifest="remarc.manifest"> -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>BBC Remarc</title>
+
+<!-- Bootstrap Latest compiled and minified CSS -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+<!-- Bootstrap Optional theme -->
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+
+<!-- Our own custom css -->
+<link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><span><img class="navbar-brand-logo" src="./images/bbc_logo.png" alt="BBC" /></span> Remarc</a>
+			<button type="button" class="navbar-toggle narbar-overflow-btn glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#mainNav"><span class="sr-only">Expand</span></button>
+		<!-- glyphicon-menu-hamburger -->
+		</div>
+		<div id="mainNav" class="collapse navbar-collapse">
+			<ol class="nav navbar-nav navbar-right">
+      			<li><a id="nav-information" href="#" class="navbar-link">Information</a></li>
+      			<li><a id="nav-about" href="#" class="navbar-link">About</a></li>
+    		</ol>
+    	</div>
+	</nav>
+
+	<div id="introduction-modal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h2 class="modal-title">BBC Reminiscence Archive</h2>
+      		</div>
+      		<div class="modal-body">      
+				<p>Welcome to the BBC Reminiscence Archive. This archive provides access to a selection of content from the BBC Archives, designed to support reminiscence therapy.</p>
+				<p>The principle of reminiscence therapy is to assist people who have dementia to interact and converse in a natural way by stimulating their long-term memory with material from the past.  It is often the case that long-term memory can still function when the person’s working (short-term) memory is degraded.  Tapping into long-term memory can make it possible once again for them to enjoy interacting with others, through their stories.</p>
+				<p>A number of reminiscence systems have been developed for people with dementia, based on photographs, photo books, boxes of objects and materials and interactive computer applications.  The BBC wants to contribute to this growing set of supports for people with dementia and their carers by drawing on the enormous fund of photos, videos, and sound clips in its archives.</p>
+				<p><strong>To begin, simply select a Theme (such as Sport, Events etc.) or a Decade (1920s, 1930s etc.) and choose whether you wish to have Image, Audio or Video content. The results are randomised each visit, however items can be 'favourited' to return to later.</strong></p>
+				<p>For more information about dementia, please visit <a target="_blank" href="http://www.alzheimers.org.uk">The Alzheimer’s Society</a> or <a target="_blank" href="http://www.alzscot.org/">Alzheimers Scotland</a></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Begin</button>
+			</div>
+    	</div>
+  		</div>
+	</div>
+	
+	<div id="about-modal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;<span class="sr-only">Close</span></button>
+        		<h2 class="modal-title">About RemArc</h2>
+      		</div>
+      		<div class="modal-body">
+				<p>The BBC Reminiscence Archive (or RemArc) was developed by Atos in partnership with the BBC and Dundee University as a tool to aid the care and treatment of dementia sufferers</p>
+				<p>For more information, please visit <a target="_blank" href="http://uk.atos.net/">Atos</a>, <a target="_blank" href="http://www.bbc.co.uk/">BBC</a> and <a target="_blank" href="http://www.dundee.ac.uk/">Dundee University</a></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+			</div>
+    	</div>
+  		</div>
+	</div>
+
+	<div id="container-parent">
+
+		<!-- Initial split view with options for Theme or Decade selection -->
+		<div id="container-options" class="container-fluid container-table">
+			<section id="container-split-theme" class="container-row">
+				<div class="container-content">
+					<h2>Theme</h2>
+				</div>
+			</section>
+			<section id="container-split-decade" class="container-row">
+				<div class="container-content">
+					<h2>Decade</h2>
+				</div>
+			</section>
+			<div id="table-circle" class="table-overlay">
+				<div class="table-overlay-text">OR</div>
+			</div>
+		</div>
+
+		<!-- Theme selection options, hidden on load -->
+		<div id="container-theme" class="container-fluid container-hidden">
+			<div class="row selection-header">
+				<div class="col-xs-12">
+					<h2>Theme</h2>
+				</div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><button id="theme-1" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-2" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-3" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-4" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><button id="theme-5" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-6" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-7" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-8" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><button id="theme-9" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="theme-10" type="button" class="btn btn-default btn-block btn-theme">&lt;theme&gt;</button></div>
+				<div class="col-sm-3"><button id="Favourites-Theme" type="button" class="btn btn-default btn-block btn-theme">Favourites</button></div>
+				<div class="col-sm-3"><button id="btn-back-theme" type="button" class="btn btn-default btn-block btn-back">Back</button></div>
+			</div>
+			<div id="row-media-theme" class="row selection-row media-row">
+				<div class="col-sm-4"><button type="button" class="btn btn-default btn-block btn-media-image"><span class="glyphicon media-icon glyphicon-camera"></span><br/>Images</button></div>
+				<div class="col-sm-4"><button type="button" class="btn btn-default btn-block btn-media-audio"><span class="glyphicon media-icon glyphicon-volume-up"></span><br/>Audio</button></div>
+				<div class="col-sm-4"><button type="button" class="btn btn-default btn-block btn-media-video"><span class="glyphicon media-icon glyphicon-facetime-video"></span><br/>Video</button></div>
+			</div>
+		</div>
+
+		<!-- Decade selection options, hidden on load -->
+		<div id="container-decade" class="container-fluid container-hidden">
+			<div class="row selection-header">
+				<div class="col-xs-12">
+					<h2>Decade</h2>
+				</div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><button id="1920s" type="button" class="btn btn-default btn-block btn-decade">1920s</button></div>
+				<div class="col-sm-3"><button id="1930s" type="button" class="btn btn-default btn-block btn-decade">1930s</button></div>
+				<div class="col-sm-3"><button id="1940s" type="button" class="btn btn-default btn-block btn-decade">1940s</button></div>
+				<div class="col-sm-3"><button id="1950s" type="button" class="btn btn-default btn-block btn-decade">1950s</button></div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><button id="1960s" type="button" class="btn btn-default btn-block btn-decade">1960s</button></div>
+				<div class="col-sm-3"><button id="1970s" type="button" class="btn btn-default btn-block btn-decade">1970s</button></div>
+				<div class="col-sm-3"><button id="1980s" type="button" class="btn btn-default btn-block btn-decade">1980s</button></div>
+				<div class="col-sm-3"><button id="1990s" type="button" class="btn btn-default btn-block btn-decade">1990s</button></div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><button id="2000s" type="button" class="btn btn-default btn-block btn-decade">2000s</button></div>
+				<div class="col-sm-3"><button id="2010s" type="button" class="btn btn-default btn-block btn-decade">2010s</button></div>
+				<div class="col-sm-3"><button id="Favourites-Decade" type="button" class="btn btn-default btn-block btn-decade">Favourites</button></div>
+				<div class="col-sm-3"><button id="btn-back-decade" type="button" class="btn btn-default btn-block btn-back">Back</button></div>
+			</div>
+			<div id="row-media-decade" class="row selection-row media-row">
+				<div class="col-sm-4"><button type="button" class="btn btn-default btn-block btn-media-image"><span class="glyphicon media-icon glyphicon-camera"></span><br/>Images</button></div>
+				<div class="col-sm-4"><button type="button" class="btn btn-default btn-block btn-media-audio"><span class="glyphicon media-icon glyphicon-volume-up"></span><br/>Audio</button></div>
+				<div class="col-sm-4"><button type="button" class="btn btn-default btn-block btn-media-video"><span class="glyphicon media-icon glyphicon-facetime-video"></span><br/>Video</button></div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Makes the page load quicker if we do this here -->
+
+	<!-- jQuery Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="./script/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./script/lib/jquery-ui.min.js"></script>
+	
+	<!-- Bootstrap Latest compiled and minified JavaScript -->
+	<script src="./script/lib/bootstrap.min.js"></script>
+	
+	<!-- Custom javascript functions -->
+	<script src="./script/main.js"></script>
+
+	<script type="text/javascript">
+	
+	$( document ).ready(function() {
+		
+		initPage();
+		
+	});
+
+	
+
+</script>
+
+</body>
+</html>

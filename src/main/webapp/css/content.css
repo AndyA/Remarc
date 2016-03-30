@@ -1,0 +1,224 @@
+body {
+	padding-top: 0px; /* Overriding from main.css, using a different nav bar style*/
+	background-color: #000000;
+}
+
+#fav-text {
+	padding-bottom: 0px;
+}
+
+.carousel-caption {
+    top: 30px;
+    bottom: auto;
+}
+
+.audio-control {
+	font-size: 8em;
+	cursor: pointer;
+}
+
+.audio-control-active {
+	color: #00FF00;
+}
+
+/* Used to control the height of the thumbnail panel in relation to the page... use with container-carousel */
+.container-thumbnails {
+	height: 15vh;
+  	max-height: 15vh;
+	background-color: #000000;
+}
+
+.container-thumbnail-navigation {
+	overflow: hidden;
+  	width: 100%;
+  	height: 100%;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+}
+
+.container-thumbnail-content {
+	width: 8%;
+  	height: 100%;
+  	display: inline-block;
+  	background-size: cover;
+  	background-position: center;
+  	border: 1px solid #999999;
+  	margin-left: 5px;
+  	margin-right: 5px;
+  	cursor: pointer;
+}
+
+.selected-img {
+	opacity: 0.5;
+	border: 2px solid black;
+}
+
+/*
+====== Carousel Configuration ======
+*/
+
+.carousel, .carousel-inner, .item {
+	height: 100%;
+}
+
+.full-page {
+    width: 100%;
+    height: calc(85% - 51px); /* we subtract the height of the navbar, footer is assumed to be 15% height */
+    background-position: center center;
+    background-size: cover;
+    background-color: #000000;
+    padding: 0px;
+}
+
+/* iPhone 4/4S Landscape fix for carousel */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+}
+/* iPhone 5/5S Landscape fix for carousel */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+}
+/* iPhone 6 Landscape fix for carousel */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+
+}
+/* iPhone 6+ Landscape fix for carousel */
+@media only screen 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 3) 
+{ 
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+}
+
+/* Modified so that it's centered in half the height of the container, with a solid background not a gradient */
+.carousel-control {
+  height: 50%;
+  top: 25%;
+  width: 5%;
+  color: #fff;
+  filter: alpha(opacity=50);
+  opacity: .5;
+  background-color: #000000;
+}
+
+/*
+====== Carousel Images ======
+*/
+
+.carousel-img-audio {
+	opacity: 0.5;
+}
+
+.carousel-img-bg {
+	height: 100%;
+  	width: 100%;
+  	position: absolute;
+  	opacity: 0.5;
+  	z-index: -10;
+  	background-size: cover;
+  	background-position: center;
+  	transform: scale(1.2);
+  	-webkit-filter: blur(5px);
+  	-o-filter: blur(5px);
+  	-ms-filter: blur(5px);
+  	filter: blur(5px);
+}
+
+@media all
+   and (orientation:portrait)
+{
+	.carousel-img {
+		height: auto;
+		width: 100% !important;
+		max-width: 100%;
+		display: inline-block !important;
+		vertical-align: middle;
+	}
+	
+	.carousel-img:before {
+		content: " ";
+		display: inline-block;
+		vertical-align: middle;
+		height: 50%;
+		width: 0px;
+	} 
+	
+
+	.item {
+		text-align: center;
+	}
+}
+
+ @media all
+   and (orientation:landscape)
+{   
+	 .carousel-img {
+	 	height: 100% !important;
+	 	width: auto;
+		margin-left: auto;
+		margin-right: auto; 	
+	 }
+}
+
+/*
+====== Favourites ======
+*/
+
+.favourite {
+	
+}
+
+.favourite-on {
+	color: yellow;
+}
+
+.thumbnail-nav {
+	overflow: hidden;
+	border-width: 0px;
+	color: white;
+	position: relative;
+	width: 20%;
+}
+
+.thumbnail-next-text {
+	position: absolute;
+  	top: 50%;
+  	left: 5%;
+  	transform: translate(0%, -50%);
+}
+
+.thumbnail-prev-text {
+	position: absolute;
+  	top: 50%;
+  	right: 5%;
+  	transform: translate(0%, -50%);
+}

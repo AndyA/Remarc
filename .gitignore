@@ -1,0 +1,9 @@
+.tern-project
+.settings/
+.DS_Store
+/target/
+target
+.settings/*
+!.settings/.jsdtscope
+.project
+.classpath
