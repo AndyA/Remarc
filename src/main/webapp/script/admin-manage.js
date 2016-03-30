@@ -7,7 +7,7 @@ var selectedFile;
 
 function initPage() {
 
-	$('#resource-file-tree').fileTree({ root: '../app-root/data/content/', script: 'connectors/jqueryFileTree.jsp' }, function(file) { 
+	$('#resource-file-tree').fileTree({ root: 'content/', script: 'connectors/jqueryFileTree.jsp' }, function(file) { 
 		parseAndProcessFile(file);
 	});
 
@@ -36,12 +36,14 @@ function getResource(type, id) {
 
 function parseAndProcessFile(file) {
 
-	var dirFile = file.replace('../app-root/data/content/', '');
-	var dir = dirFile.substr(0, dirFile.lastIndexOf('/'));
-	var fileExt = dirFile.substr(dirFile.lastIndexOf('/') + 1);
+	var fileAndExt = file.substr(file.lastIndexOf('/') + 1);
+	var dirMinusFile = file.substr(0, file.lastIndexOf('/'));
+	var content = dirMinusFile.substr(dirMinusFile.lastIndexOf('/') + 1);
+
+	var fileExt = fileAndExt.substr(fileAndExt.lastIndexOf('/') + 1);
 	var file = fileExt.substr(0, fileExt.lastIndexOf('.'));
 
-	selectedContentType = dir;
+	selectedContentType = content;
 	selectedFile = file;
 	
 	getResource(selectedContentType, selectedFile);

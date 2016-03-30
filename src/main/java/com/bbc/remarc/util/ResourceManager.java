@@ -296,10 +296,10 @@ public class ResourceManager {
 	private static ResourceType getTypeFromExtension(String extension) {
 		
 		ResourceType type = null;
-		
+
 		if (extension.equalsIgnoreCase("properties")) {
 			type = ResourceType.PROPERTIES;
-		} else if (extension.equalsIgnoreCase("jpg") || extension.equalsIgnoreCase(".jpeg")) {
+		} else if (extension.equalsIgnoreCase("jpg") || extension.equalsIgnoreCase("jpeg")) {
 			type = ResourceType.IMAGE;
 		} else if (extension.equalsIgnoreCase("mp3") || extension.equalsIgnoreCase("ogg")) {
 			type = ResourceType.AUDIO;
