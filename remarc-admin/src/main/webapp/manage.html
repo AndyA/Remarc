@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Remarc - Admin Resource Management</title>
+
+<!-- Bootstrap Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Bootstrap Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!-- Our own custom css -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<link rel="stylesheet" href="css/jqueryFileTree.css">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><span><img class="navbar-brand-logo" src="images/logo.png" alt="Logo" /></span> Remarc</a>
+		</div>
+	</nav>
+
+	<div id="container-parent" class="container-admin-main">
+
+		<h1>Resource Management</h1>
+		<p>All the resources successfully uploaded and processed onto the server can be edited and managed below.</p>
+
+		<div class="row">
+			<div class="col-md-4 column-bottom-margin">
+				<div id="resource-library" class="container-resource">
+					<h2>Resource Library</h2>
+					<div id="resource-file-tree" class="container-filetree">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 column-bottom-margin">
+				<div id="resource-preview" class="container-resource">
+					<h2 id="preview-text">Resource Preview</h2>
+					<div id="resource-display" class="container-resource-display">
+					
+						<div id="display-content" class="container-display-content">
+						</div>
+						
+						<div id="display-meta" class="container-display-meta"><!-- <textarea rows="2" id="metadata" class="meta-textarea">theme=pets&#13;&#10;decade=1920&#13;&#10;More!</textarea>  -->
+						</div>
+
+						<span id="info-prompt" class="info-header text-hidden">More Information Text:</span>
+
+						<div id="display-info" class="container-display-meta">
+						</div>
+						
+						<div id="display-buttons" class="container-display-buttons">
+							<button id="btn-save" type="button" class="btn btn-default btn-admin">Save</button>
+							<button id="btn-delete" type="button" class="btn btn-danger btn-admin">Delete</button>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- Makes the page load quicker if we do this here -->
+
+	<!-- jQuery Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="script/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="script/lib/jquery-ui.min.js"></script>
+	
+	<!-- Bootstrap Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="script/lib/bootstrap.min.js"></script>
+
+	<!-- Jquery File Tree -->
+	<script type="text/javascript" src="script/lib/jqueryFileTree.js"></script>
+	<script type="text/javascript" src="script/lib/jquery.easing.js"></script>
+
+	<!-- Custom javascript functions -->
+	<script src="script/admin-manage.js"></script>
+
+	<script type="text/javascript">
+
+	$( document ).ready(function() {
+
+		initPage();
+		
+	});
+
+	</script>
+
+</body>
+</html>

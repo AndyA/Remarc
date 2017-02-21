@@ -1,0 +1,250 @@
+/*
+ * Copyright (C) 2016 BBC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	font-family: "Gill Sans MT Regular", "Gill Sans MT", "Gill Sans Regular","Gill Sans", "Arial";
+	font-size: 1.5vw;
+	padding-top: 50px; /*This is to counter the nav-fixed-top style*/
+}
+
+/*
+====== Navigation Bar ======
+*/
+
+/* Override bootstrap nav bar, remove the margin so the containers all sit flush to it */
+.navbar {
+	margin-bottom: 0px;
+}
+
+/* This is to change the colour of the nav bar */
+.navbar-inverse {
+  	background-image: -webkit-linear-gradient(top,#000 0,#111 100%);
+  	background-image: -o-linear-gradient(top,#000 0,#111 100%);
+  	background-image: -webkit-gradient(linear,left top,left bottom,from(#000),to(#111));
+  	background-image: linear-gradient(to bottom,#000 0,#111 100%);
+}
+
+.navbar-brand-logo {
+	height:100%;
+	display: inline-block;
+	margin-top: -3px;
+}
+
+.navbar-right {
+	padding-right: 20px;
+}
+
+.narbar-overflow-btn {
+	color: white;
+}
+
+/*
+====== Containers/Main Layout ======
+*/
+
+#container-parent {
+	height: 100%;
+	min-height: 100%;
+}
+
+/* Represents the whole table, which contains 2 container rows */
+.container-table {
+	height: 100%;
+	display: table;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	color: #FFFFFF;
+}
+
+/* Represents a single row, either Theme or Decade */
+.container-row {
+	height: 50%;
+	width: 100%;
+	display: table-row;
+	cursor: pointer;
+}
+
+/* Represents text inside the row, i.e. the title "Theme" */
+.container-content {
+	display: table-cell;
+	text-align: center;
+  	vertical-align: middle;
+}
+
+/* Hidden container on page load, will be shown via javascript toggle method. Used to contain selection */
+.container-hidden {
+	display: none;
+	height: 100%;
+	color: #FFFFFF;
+}
+
+#container-theme, #container-split-theme, .theme-bg {
+	background-color: #444444;
+}
+
+#container-decade, #container-split-decade, .decade-bg {
+	background-color: #888888;
+}
+
+/*
+====== Container Overlay Circle ======
+*/
+
+/*Creates a white circle, 50x50 and positions the center of it where top-left would be*/
+#table-circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+    background-color: #FFFFFF;
+    margin-left: -25px;
+	margin-top: -25px;
+}
+
+/*Overlays the contents of this div over the parent, with the top-left in the center*/
+.table-overlay {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 10;
+}
+
+/*Text to be used in the overlay. The margin-top could be better defined I think?*/
+.table-overlay-text {
+	text-align: center;
+  	margin-top: 10px;
+	color: #000000;
+}
+
+/*
+====== Selection Options ======
+*/
+.selection-header {
+	text-align: center;
+	padding: 20px;
+}
+
+.selection-row {
+	text-align: center;
+	padding: 10px;
+}
+
+.media-row {
+	display: none;
+	margin-top: 30px;
+}
+
+/*
+====== Selection Buttons ======
+*/
+
+/* Overrides the style for all buttons first */
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    border-radius:0;
+    font-family: "Gill Sans MT Regular", "Gill Sans MT", "Gill Sans Regular","Gill Sans", "Arial";
+	font-size: 1.5vw;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none; /* Remove the outline on press */
+}
+ 
+ /* Now override the style for the default button class, used for all selection buttons on the container page*/
+.btn-default {
+    background: #555555;
+    color: #ffffff;
+    text-shadow: none;
+    border: 2px solid;
+    border-color: #333333;
+}
+ 
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    background: #666666;
+    color: #ffffff;
+    border-color: #333333;
+}
+ 
+.btn-default:active, .btn-default.active {
+    background: #777777;
+    color: #ffffff;
+    box-shadow: none;
+    border-color: #333333;
+}
+
+/* Classes for theme and decade command buttons, if needed */
+.btn-theme, .btn-decade {
+	
+}
+
+/* Classes for images, audio and video, if needed */
+.btn-media-image, .btn-media-audio, .btn-media-video {
+	
+}
+
+.media-icon {
+	font-size: 8vw;
+	vertical-align: middle;
+}
+
+/* Add a back button style that's plain */
+.btn-back, .btn-back:hover, .btn-back:focus, .btn-back:active, .btn-back.active, .open > .dropdown-toggle.btn-back  {
+	background: #333333;
+}
+
+/*
+====== Intro Modal ======
+*/
+
+@media (min-width: 768px) {
+.modal-dialog {
+  width: 700px;
+}
+}
+
+.modal-header {
+	text-align: center;
+	border-bottom-style: none;
+	color: #222222;
+}
+
+.modal-content {
+	background-color: #fff;
+	color: #222222;
+	border-bottom-style: none;
+	font-size: medium;
+}
+
+.modal-footer {
+	text-align: center;
+	border-top-style: none;
+}

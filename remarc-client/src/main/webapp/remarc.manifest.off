@@ -1,0 +1,39 @@
+CACHE MANIFEST
+# 2015-06-12 v0.0.6
+
+CACHE:
+
+#pages
+index.html
+content.html
+
+#css
+css/content.css
+css/main.css
+css/bootstrap.min.css
+css/bootstrap-theme.min.css
+
+#images
+images/icon_pause.gif
+images/icon_play.gif
+images/bbc_logo.png
+
+#javascript
+script/jquery-touch.js
+script/bootstrap.min.js
+script/npm.js
+script/jquery-ui.min.js
+script/jquery-1.11.3.min.js
+
+#fonts
+fonts/glyphicons-halflings-regular.eot
+fonts/glyphicons-halflings-regular.svg
+fonts/glyphicons-halflings-regular.ttf
+fonts/glyphicons-halflings-regular.woff
+fonts/glyphicons-halflings-regular.woff2
+
+NETWORK:
+
+#wildcard... this is to allow the API call to work
+*
+

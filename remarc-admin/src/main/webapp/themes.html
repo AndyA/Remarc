@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Remarc - Admin Theme Management</title>
+
+<!-- Bootstrap Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Bootstrap Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!-- Our own custom css -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><span><img class="navbar-brand-logo" src="images/logo.png" alt="Logo" /></span> Remarc</a>
+		</div>
+	</nav>
+
+	<div id="container-parent" class="container-admin-main">
+
+		<h1>Theme Management</h1>
+		<p>Customise the 8 themes that appear on the home page. To edit, just click the button you wish to change.</p>
+
+		<!-- Theme selection options, hidden on load -->
+		<div id="container-theme" class="container-fluid">
+			<div class="row selection-row">
+				<div class="col-sm-3"><input type="text" id="theme-1" name="theme-1" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+				<div class="col-sm-3"><input type="text" id="theme-2" name="theme-2" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+				<div class="col-sm-3"><input type="text" id="theme-3" name="theme-3" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+				<div class="col-sm-3"><input type="text" id="theme-4" name="theme-4" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3"><input type="text" id="theme-5" name="theme-5" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+				<div class="col-sm-3"><input type="text" id="theme-6" name="theme-6" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+				<div class="col-sm-3"><input type="text" id="theme-7" name="theme-7" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+				<div class="col-sm-3"><input type="text" id="theme-8" name="theme-8" value="<theme>" class="btn btn-default btn-block btn-theme"></div>
+			</div>
+			<div class="row selection-row">
+				<div class="col-sm-3 col-sm-push-3"><button type="button" class="btn btn-default btn-block btn-theme" disabled>Favourites</button></div>
+				<div class="col-sm-3 col-sm-push-3"><button type="button" class="btn btn-default btn-block btn-back" disabled>Back</button></div>
+			</div>
+		</div>
+
+	<button id="btn-save" class="btn btn-default btn-admin">Save</button>
+
+	</div>
+
+	<!-- Makes the page load quicker if we do this here -->
+
+	<!-- jQuery Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="script/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="script/lib/jquery-ui.min.js"></script>
+	
+	<!-- Bootstrap Latest compiled and minified JavaScript -->
+	<script src="script/lib/bootstrap.min.js"></script>
+
+	<!-- Custom javascript functions -->
+	<script src="script/admin-themes.js"></script>
+
+	<script type="text/javascript">
+	
+	$( document ).ready(function() {
+
+		initPage();
+		
+	});
+	
+	</script>
+
+</body>
+</html>

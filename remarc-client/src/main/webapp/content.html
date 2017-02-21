@@ -1,0 +1,154 @@
+<!doctype html>
+<!-- <html lang="en" manifest="remarc.manifest"> -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Remarc - Content</title>
+
+<!-- Bootstrap Latest compiled and minified CSS -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+<!-- Bootstrap Optional theme -->
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/content.css">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><span><img class="navbar-brand-logo" src="./images/logo.png" alt="Logo" /></span> Remarc</a>
+			<button type="button" class="navbar-toggle narbar-overflow-btn glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#mainNav"><span class="sr-only">Expand</span></button>
+		</div>
+		<div id="mainNav" class="collapse navbar-collapse">
+			<ol class="nav navbar-nav navbar-left">
+				<li><p class="navbar-btn"><a href="index.html" class="btn btn-secondary">Start Again</a></p></li>
+			</ol>
+			<ol class="nav navbar-nav navbar-right">
+				<li><a id="more-info" class="navbar-link" href="#">
+					<span class="nav-text">Information </span></a></li>
+      			<li><a id="fav-link" class="navbar-link" href="#">
+					  <span id="fav-text" class="nav-text" data-text-add-fav="Add To Favourites " data-text-rem-fav="Remove From Favourites ">Add To Favourites </span> 
+					  <span id="fav-star" class="nav-icon glyphicon glyphicon-star"></span></a></li>
+    		</ol>
+    	</div>
+	</nav>
+
+	<div id="info-modal" class="modal fade" role="dialog">
+  		<div class="modal-dialog modal-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;<span class="sr-only">Close</span></button>
+					<h2 class="modal-title">More Information</h2>
+				</div>
+				<div class="modal-body">
+					<p id="infoTextField">More information long text describing the content being displayed.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+  		</div>
+	</div>
+
+	<div id="introduction-modal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h2 class="modal-title">Introduction Title</h2>
+				</div>
+				<div class="modal-body">      
+					<p>Insert introduction text into this dialog.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Begin</button>
+				</div>
+			</div>
+  		</div>
+	</div>
+
+	<div class="container-fluid full-page">
+
+		<div id="imgCarousel" class="main-carousel carousel slide" data-interval="false">
+			<div id="carouselContent" class="carousel-inner">
+				<!-- Slide content will go here -->
+			</div>
+			<!-- main slider carousel nav controls -->
+			<a class="carousel-control left" href="#imgCarousel"
+				data-slide="prev"> <span class="sr-only">Scroll Left</span><span
+				class="glyphicon glyphicon-chevron-left"></span>
+			</a> <a class="carousel-control right" href="#imgCarousel"
+				data-slide="next"> <span class="sr-only">Scroll Right</span><span
+				class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+
+			<!-- Add the info button to the top of the carousel -->
+			<a id="carousel-info-btn" class="carousel-info">
+				<span class="glyphicon glyphicon-info-sign" />
+			</a>
+		</div>
+
+		<!-- Thumbnail holder -->
+		<div class="container-thumbnails">
+
+				<div id="thumbnailCarousel" class="carousel slide" data-interval="false">
+					<div id="thumbnailContent" class="carousel-inner">
+						<!-- Slide thumbnails will go here -->		
+					</div>
+					<!-- main slider carousel nav controls -->
+					<!--  
+					<a class="carousel-control left" href="#thumbnailCarousel"
+						data-slide="prev">
+						<span class="sr-only">Scroll Thumbnails Left</span>
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="carousel-control right" href="#thumbnailCarousel"
+						data-slide="next">
+						<span class="sr-only">Scroll Thumbnails Right</span>
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+					-->
+				</div>
+			<div id="restartButton" >
+				<a id="view-more-text" class="btn btn-link text-hidden" href="#"></a>
+			</div>
+		</div>
+
+		<!-- Audio players will be injected in here if needed, not displayed -->
+		<div id="audioPlayers"></div>
+
+	</div>
+
+	<!-- Makes the page load quicker if we do this here -->
+
+	<!-- jQuery Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="./script/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./script/lib/jquery-ui.min.js"></script>
+	
+	<!-- Bootstrap Latest compiled and minified JavaScript -->
+	<script src="./script/lib/bootstrap.min.js"></script>
+	
+	<!-- jQuery Mobile v1.3.2 | Copyright 2010, 2013 jQuery Foundation, Inc. | jquery.org/license -->
+	<script src="./script/lib/jquery-touch.js"></script>
+
+	<!-- Custom javascript functions -->
+	<script src="./script/content.js"></script>
+
+	<script type="text/javascript">
+	
+	$( document ).ready(function() {
+
+		initPage();
+		
+	});
+
+	
+
+</script>
+
+</body>
+</html>

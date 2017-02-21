@@ -1,0 +1,383 @@
+/*
+ * Copyright (C) 2016 BBC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+body {
+	padding-top: 0px; /* Overriding from main.css, using a different nav bar style*/
+	background-color: #000000;
+}
+
+#fav-link {
+	height: 50px;
+}
+
+#more-info {
+	height: 50px;
+}
+
+.carousel-caption {
+    top: 30px;
+    bottom: auto;
+}
+
+.audio-control {
+	font-size: 8em;
+	cursor: pointer;
+}
+
+.audio-control-active {
+	color: #00FF00;
+}
+
+/* Navigation bar styling */
+.navbar-right {
+	margin-right: 0px;
+}
+
+.navbar-btn {
+	margin-top: 4px;
+    margin-bottom: 4px;
+	height: 42px;
+    background-color: white;
+}
+
+.navbar-btn > a {
+	color: black;
+	padding: 4px 20px 4px 20px;
+	font-size: 24px;
+}
+
+.nav-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav-icon {
+	vertical-align: middle;
+	margin-top: -2.5px;
+}
+
+/* Styling of overlaying buttons */
+
+#restartButton {
+	position: absolute;
+	right: 10vw;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform:translateY(-50%);
+}
+
+.btn-link {
+	color: rgb(153, 153, 153);
+}
+
+.btn-link:hover {
+	text-decoration: none;
+	color: white;
+}
+
+/* Used to control the height of the thumbnail panel in relation to the page... use with container-carousel */
+.container-thumbnails {
+	height: 15%;
+  	max-height: 15%;
+	background-color: #000000;
+	position: relative;
+}
+
+.container-thumbnail-navigation {
+	overflow: hidden;
+  	width: 100%;
+  	height: 100%;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+}
+
+.container-thumbnail-content {
+	width: 8%;
+  	height: 100%;
+  	display: inline-block;
+  	background-size: cover;
+  	background-position: center;
+  	border: 1px solid #999999;
+  	margin-left: 5px;
+  	margin-right: 5px;
+  	cursor: pointer;
+}
+
+.selected-img {
+	opacity: 0.5;
+	border: 2px solid black;
+}
+
+/*
+====== Carousel Configuration ======
+*/
+
+.carousel, .carousel-inner, .item {
+	height: 100%;
+}
+
+.main-carousel {
+	height: 85%;
+}
+
+.full-page {
+    width: 100%;
+    height: 100%;
+	padding: 0px;
+	padding-top: 51px; /* Pad for the navigation bar at the top */
+    background-position: center center;
+    background-size: cover;
+    background-color: #000000;
+}
+
+/* iPhone 4/4S Landscape fix for carousel */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+}
+/* iPhone 5/5S Landscape fix for carousel */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+}
+/* iPhone 6 Landscape fix for carousel */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+
+}
+/* iPhone 6+ Landscape fix for carousel */
+@media only screen 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 3) 
+{ 
+	.full-page {
+    	height: calc(85% - 51px - 60px);
+	}
+}
+
+/* Modified so that it's centered in half the height of the container, with a solid background not a gradient */
+.carousel-control {
+  height: 50%;
+  top: 25%;
+  width: 10%;
+  color: #fff;
+  filter: alpha(opacity=50);
+  opacity: .5;
+  background-color: #000000;
+}
+
+.carousel-control:hover {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+.carousel-control:focus {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+.carousel-control:active {
+  filter: alpha(opacity=90);
+  opacity: .9;
+}
+
+.carousel-control:focus {
+	opacity: .7;
+}
+
+.carousel-control > .glyphicon {
+	font-size: 70px;
+	transform: translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	margin-left: 0px;
+    height: 70px;
+    width: 70px;
+    top: 50%;
+    left: 50%;
+}
+
+/*
+====== Carousel Images ======
+*/
+
+.carousel-img-audio {
+	opacity: 0.5;
+}
+
+.carousel-img-bg {
+	height: 100%;
+  	width: 100%;
+  	position: absolute;
+  	opacity: 0.5;
+  	z-index: -10;
+  	background-size: cover;
+  	background-position: center;
+  	transform: scale(1.2);
+	-webkit-transform:scale(1.2);
+  	-webkit-filter: blur(5px);
+  	-o-filter: blur(5px);
+  	-ms-filter: blur(5px);
+  	filter: blur(5px);
+}
+
+@media all
+   and (orientation:portrait)
+{
+	.carousel-img {
+		height: auto;
+		width: 100% !important;
+		max-width: 100%;
+		display: inline-block !important;
+		vertical-align: middle;
+	}
+	
+	.carousel-img:before {
+		content: " ";
+		display: inline-block;
+		vertical-align: middle;
+		height: 50%;
+		width: 0px;
+	} 
+	
+
+	.item {
+		text-align: center;
+	}
+}
+
+ @media all
+   and (orientation:landscape)
+{   
+	 .carousel-img {
+	 	height: 100% !important;
+	 	width: auto;
+		margin-left: auto;
+		margin-right: auto; 	
+	 }
+}
+
+/*
+====== Favourites ======
+*/
+
+.favourite {
+	
+}
+
+.favourite-on {
+	color: yellow;
+}
+
+.thumbnail-nav {
+	overflow: hidden;
+	border-width: 0px;
+	color: rgb(153, 153, 153);
+	position: relative;
+	width: 20%;
+}
+
+.thumbnail-nav:active {
+	color: white;
+}
+
+.thumbnail-next-text {
+	position: absolute;
+  	top: 50%;
+  	left: 5%;
+  	transform: translate(0%, -50%);
+	-webkit-transform:translate(0%, -50%);
+}
+
+.thumbnail-prev-text {
+	position: absolute;
+  	top: 50%;
+  	right: 5%;
+  	transform: translate(0%, -50%);
+	-webkit-transform:translate(0%, -50%);
+}
+
+.thumbnail-text {
+	font-size: 35px;
+}
+
+.thumbnail-text > p {
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0px;
+	margin-top: -9px;
+}
+
+.thumbnail-text > .glyphicon {
+	vertical-align: middle;
+	margin-top: -9px;
+}
+
+/*
+===== Information Dialog =====
+*/
+.carousel-info {
+	position: absolute;
+    top: 2vh;
+    right: 2vw;
+    font-size: 46px;
+	cursor: pointer;
+}
+
+.carousel-info > .glyphicon {
+	color:white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.modal-centered {
+	position: absolute;
+    top: 35%;
+    left: 50%;
+    transform:translate(-50%, -50%) !important;
+	-webkit-transform:translate(-50%, -50%) !important;
+}
+
+#infoTextField {
+	font-size: 3.0vh;
+}
+
+.text-hidden {
+	display: none;
+}
